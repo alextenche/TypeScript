@@ -1,32 +1,12 @@
-var first = function (x) {
-    return x + 10;
-};
-function second(x) {
-    return x + 10;
-}
-var third = function (x) { return x + 10; };
-function fourth(fn) {
-    fn(10);
-}
-;
-fourth(first);
-function sum(a, b) {
-    if (typeof a === "string") {
-        a = parseInt(a, 10);
+var Point = (function () {
+    function Point(x, y) {
+        this.x = x;
+        this.y = y;
     }
-    if (typeof b === "string") {
-        b = parseInt(b, 10);
-    }
-    return a + b;
-}
-;
-sum(1, 2);
-sum("1", 2);
-sum("1", "2");
-var messenger = {
-    message: "Hello, World",
-    start: function () {
-        var _this = this;
-        setTimeout(function () { alert(_this.message); }, 1000);
-    }
-};
+    Point.prototype.doSomething = function () {
+        return this.x.toString() + " " + this.y.toString();
+    };
+    return Point;
+}());
+var p = new Point(1, 2);
+alert(p.doSomething());

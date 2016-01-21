@@ -22,7 +22,9 @@
     "compileOnSave": true,
     "buildOnSave": false,
     "files": [
-        "app.ts"
+        "app.ts",
+        "functions.ts",
+        "objects.ts"
     ],
     "atom": {
         "rewriteTsconfig": true
